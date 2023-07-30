@@ -1,0 +1,16 @@
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+  # Replace or add the following lines to your ~/.gitconfig file  #
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+  # With this alias, you can now use git ci commit message, and it will be expanded to git commit -m "commit message".
+	ci = "!f() { git commit -m \"$*\"; }; f"
+
+  # This alias provides a visually appealing and informative log output, with colored elements for better distinction
+  # between different parts of the log entry.
+	betterlog = "log --name-status --color --pretty=format:'%C(magenta)%d%n %C(yellow)%h%Creset · %C(green)%cn%Creset%n %C(cyan)%s'"
+
+  # This alias will show the current branch name.
+  branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+  # This alias will push the current branch to the remote repository.
+  publish = "!git push -u origin $(git branch-name)"
