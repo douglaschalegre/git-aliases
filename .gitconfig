@@ -2,6 +2,16 @@
   # Replace or add the following lines to your ~/.gitconfig file  #
   # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
 
+# User information
+[user]
+	name = yourname
+	email = yourname@email.com
+
+# Overwrite the default user on specific path
+# This is useful if you have a work account and a personal account
+[includeIf "gitdir:~/code/work"]
+  path = .gitconfig-second-user
+
   # With this alias, you can now use git ci commit message, and it will be expanded to git commit -m "commit message".
 	ci = "!f() { git commit -m \"$*\"; }; f"
 
